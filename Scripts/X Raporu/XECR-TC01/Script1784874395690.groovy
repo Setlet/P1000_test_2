@@ -17,8 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-Mobile.startExistingApplication('com.edata.application.ecrapp')
+//Mobile.startExistingApplication('com.edata.application.ecrapp')
+imageBtnClick('zx_main_page_button')
 
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
+}
+
+btnClick('X Günlük Satış Raporu')
+Mobile.delay(1)
+btnClick('Yazdır')
+Mobile.delay(5)
+imageBtnClick('home')

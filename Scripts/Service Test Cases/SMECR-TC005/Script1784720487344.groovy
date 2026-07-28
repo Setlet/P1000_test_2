@@ -16,9 +16,40 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+
 import static messageControl.messageControl.*
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
+//Go to service page
+imageBtnClick('service_main_page_button')
 
+serviceInOut()
+
+//Click on 'Olay Kayitlari'
+btnClick('Olay Kayıtları')
+
+//Click on 'Tüm Olaylar'
+btnClick('Belirli Tarih Olay Kaydı')
+txtboxClick('ETStartDate')
+
+
+setValidatedDate('10','02','2026')
+
+
+txtboxClick('ETEndDate')
+
+
+
+setValidatedDate('10','03','2026')
+
+btnClick('Onayla')
+
+Mobile.delay(5)
+
+clickBack()
+
+clickBack()
+
+clickBack()
+
+serviceInOut()

@@ -16,9 +16,35 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import static messageControl.messageControl.*
+
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import static messageControl.messageControl.*
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
+//Go to service page
+imageBtnClick('service_main_page_button')
 
+serviceInOut()
+
+//Click on 'Tüm Olaylar'
+btnClick('Tarih')
+txtboxClick('ETDate')
+
+// 1. Sistemin güncel tarihini çek
+LocalDate bugun = LocalDate.now()
+
+// 2. Gün, ay ve yılı fonksiyonuna uygun şekilde (String olarak) parçala
+String gun = bugun.getDayOfMonth().toString()
+String ay = bugun.getMonthValue().toString()
+String yil = bugun.getYear().toString()
+
+// 3. Fonksiyonuna dinamik değişkenleri gönder
+setValidatedDate(gun, ay, yil)
+
+btnClick('Onayla')
+
+btnClick('Evet')
+
+clickBack()
+
+serviceInOut()

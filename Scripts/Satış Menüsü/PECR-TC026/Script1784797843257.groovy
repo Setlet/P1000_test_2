@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-Mobile.startExistingApplication('com.edata.application.ecrapp')
+//Mobile.startExistingApplication('com.edata.application.ecrapp')
 imageBtnClick('sales_main_page_button')
 if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
 	cashierAdminLogin()
@@ -39,8 +39,10 @@ Mobile.delay(5)
 
 String fiyatMetni = Mobile.getText(findTestObject('Object Repository/Sale/Payment Type/payment_type_sum'), 5)
 if (fiyatMetni != null && !fiyatMetni.trim().equals("0,00")) {
-	saleEscape(true)
+	Mobile.tap(findTestObject('Object Repository/dynamic-button-object',[('button-name'):'Fiş İptal']), 0)
 	KeywordUtil.markFailed("Hata: RED: E55 İşlem Yapılan Kartın Seçilen Banka İle İşlem İzni Yoktur")
+	Mobile.delay(5)
+	imageBtnClick('home')
 	
 } else {
     Mobile.delay(5)

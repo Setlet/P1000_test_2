@@ -60,15 +60,26 @@ public class messageControl {
 				return
 			}
 			else {
-				Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']),3,FailureHandling.OPTIONAL)
-				Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']), '1234', 3)
-				Mobile.tap(findTestObject('Object Repository/dynamic-button-object',[('button-name'):'Giriş']),3)
 				return
 		    }
 	}
 	
-	
-	
+	@Keyword
+	def static adminLogin() {
+		
+			boolean adminLogin = Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 1, FailureHandling.OPTIONAL)
+						
+			if(adminLogin) {
+
+				Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']),5,FailureHandling.OPTIONAL)
+				Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']), '1234', 5)
+				Mobile.tap(findTestObject('Object Repository/dynamic-button-object',[('button-name'):'Giriş']),5)
+				return
+			}
+			else {
+				return
+			}
+	}
 	
 	@Keyword
 	
@@ -115,6 +126,11 @@ public class messageControl {
 		Mobile.tap(findTestObject('"Object Repository/dynamic-textbox-object', [('txtbox-id') : btnName]), 5)
 	}
 	
+	@Keyword
+	def static setTxtbox(String txtboxName, String password) {
+		Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'txtboxname']), 'password', 5)
+	}
+	
 	//Detect a message thrown 
 	@Keyword
     def static String detectMessage() {
@@ -147,7 +163,6 @@ public static void clickCheckbox(String productName) {
     String dynamicXPath = "//*[contains(@text, '" + productName + "')]/following::android.widget.CheckBox[1]"
 
     TestObject customCheckbox = new TestObject("dynamicCheckbox")
-    // ConditionType.EQUALS kullanarak doğru parametre tipini veriyoruz
     customCheckbox.addProperty("xpath", ConditionType.EQUALS, dynamicXPath)
     
     Mobile.tap(customCheckbox, 5)
@@ -189,15 +204,29 @@ def static setValidatedDate(String day, String month, String year) {
 	Mobile.tap( findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/date-edit-icon')  , 2)
 	
 	Mobile.setText(findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/tarih-txtbox'), finalDate, 2)
-	
+	Mobile.delay(2)
 	Mobile.tap(  findTestObject('Object Repository/dynamic-button-object',[('text'):'Tamam'])  , 2)
 	
 	println("System Log: Date successfully validated and set to " + finalDate)
 }
 
+@Keyword
+def static setValidatedTime(String hour, String minute) {
+	int hour_int = hour.toInteger()
+	int minute_int = minute.toInteger()
+	
+	if(hour_int < 1 || hour_int > 24) {
+		KeywordUtil.markFailedAndStop("System Error: Invalid Hour (${hour_int}). Hour must be between 1 and 24.")
+}
+if(minute_int < 0 || minute_int > 60) {
+	KeywordUtil.markFailedAndStop("System Error: Invalid month (${minute_int}). Minute must be between 0 and 60.")
+}
+Mobile.tap( findTestObject('Object Repository/Service/Saat/SS')  , 2)
+Mobile.setText(findTestObject('Object Repository/Service/Saat/SS'), hour, 2)
+Mobile.tap( findTestObject('Object Repository/Service/Saat/DD')  , 2)
+Mobile.setText(findTestObject('Object Repository/Service/Saat/DD'), minute, 2)
 
-
-
+}
 @Keyword
 def static clickBack() {
 	Mobile.tap(findTestObject('Object Repository/back-button-object'), 5)

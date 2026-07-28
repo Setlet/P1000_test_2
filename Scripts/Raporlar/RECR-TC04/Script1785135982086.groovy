@@ -17,8 +17,29 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
+imageBtnClick('zx_main_page_button')
 
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
+}
+
+btnClick('Mali Raporlar')
+Mobile.delay(1)
+btnClick('Mali Hafıza Rapor')
+labelDetect('Bitiş Z No')
+imageBtnClick('one')
+labelDetect('Başlangıç Z No')
+2.times{
+imageBtnClick('nine') 
+}
+btnClick('Onayla')
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Başlangıç Değeri Bitiş Değerinden Küçük Olmalıdır!']), 5, FailureHandling.OPTIONAL)) {
+	btnClick('Tamam')
+	KeywordUtil.markFailed("Uyarı mesajı tespit edildi: Başlangıç Değeri Bitiş Değerinden Küçük Olmalıdır!" )
+}
+Mobile.delay(5)
+clickBack()
+imageBtnClick('navigation_home')

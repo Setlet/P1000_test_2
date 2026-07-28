@@ -17,8 +17,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
-Mobile.startExistingApplication('com.edata.application.ecrapp')
 
+//Mobile.startExistingApplication('com.edata.application.ecrapp')
+//Go to service page
+imageBtnClick('service_main_page_button')
+
+2.times{
+btnClick('Tamam')
+}
+
+//Click on 'Olay Kayitlari'
+btnClick('Olay Kayıtları')
+
+//Click on 'Tüm Olaylar'
+btnClick('Son 10 Olay')
+
+clickBack()
+imageBtnClick('sold_item_cart_menu_home')
+labelDetect('01 : servis ayarları')
+2.times{
+btnClick('Tamam')
+}
+Mobile.delay(5)
+Mobile.takeScreenshot()

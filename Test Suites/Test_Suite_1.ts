@@ -12,38 +12,45 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>c3547df4-6016-4238-a5d1-ceabf5428297</testSuiteGuid>
    <testCaseLink>
-      <guid>c7eaa917-6639-4629-ac33-70636f245c31</guid>
+      <guid>054eb6bb-1a6d-4efa-a574-098842162f91</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Satış Menüsü/PECR-TC001</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>78a28dee-fdf6-4a41-8461-7b0310403626</guid>
+      <guid>43c26bc0-5b3a-4ee4-b044-a178eaef85f9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Satış Menüsü/PECR-TC002</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>14b5c712-e61e-4d6c-93e6-ce806aaa88bd</guid>
+      <guid>e6440778-ce26-44cc-a9a7-98d5a660d73f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Satış Menüsü/PECR-TC003</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>5ded004d-2cc0-4f54-8025-0a9a7b886f25</guid>
+      <guid>aaa81c77-67fe-4072-9d6a-6502c846db09</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Satış Menüsü/PECR-TC004</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>5e8a720b-85d8-41b8-b173-d0e42296595b</guid>
+      <guid>0285f8db-96a4-4e79-8923-8822249336d4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Satış Menüsü/PECR-TC005</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c4c284aa-1ca3-46cf-ad55-2d62aa0ace2d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Z Raporu/ZECR-TC01</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
