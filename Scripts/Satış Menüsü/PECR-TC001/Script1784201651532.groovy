@@ -22,7 +22,7 @@ import static messageControl.messageControl.*
 //USAGE EXAMPLE FOR SHORTENED FUNCTIONS
 
 //Wait for 2 seconds
-//Mobile.delay(8)
+Mobile.delay(8)
 //Start with home page
 Mobile.startExistingApplication('com.edata.application.ecrapp')
 //Switch to the sales page
@@ -34,7 +34,7 @@ if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-ob
 	cashierAdminLogin()
 }
 
-for (int i = 0; i < 5; i++)
+for (int i = 1; i < 5; i++)
 {	//Add 5 water into the cart
     btnClick('Su')
 }
@@ -43,7 +43,7 @@ Mobile.takeScreenshot()
 
 btnClick('Ekmek')
 imageBtnClick('soldItems')
-//Mobile.delay(3)
+Mobile.delay(3)
 
 indexBtnClick('Su','decreaseQuantity')
 
@@ -53,7 +53,7 @@ Mobile.takeScreenshot()
 imageBtnClick('home')
 
 
-btnClick('Ödeme')
+
 
 btnClick('Nakit')
 
