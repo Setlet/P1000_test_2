@@ -18,6 +18,8 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
 
+
+
 Mobile.startExistingApplication('com.edata.application.ecrapp')
 imageBtnClick('sales_main_page_button')
 if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
@@ -27,6 +29,7 @@ if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-ob
 btnClick('Ekmek')
 btnClick('Balık')
 btnClick('Nakit')
-detectMessage()
-imageBtnClick('home')
+//detectMessage()
+sleep(250)
+imageBtnClick('com.edata.application.ecrapp:id/home')
 

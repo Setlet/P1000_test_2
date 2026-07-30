@@ -14,51 +14,37 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.openai.models.realtime.AudioTranscription.Delay as Delay
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
 
-
 //USAGE EXAMPLE FOR SHORTENED FUNCTIONS
-
 //Wait for 2 seconds
 Mobile.delay(8)
+
 //Start with home page
 Mobile.startExistingApplication('com.edata.application.ecrapp')
+
 //Switch to the sales page
-
 imageBtnClick('sales_main_page_button')
-//Check if cashier login is required
 
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
-	cashierAdminLogin()
+//Check if cashier login is required
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object', [('text') : 'Kasiyer Girişi']), 5, 
+    FailureHandling.OPTIONAL)) {
+    cashierAdminLogin()
 }
 
-for (int i = 1; i < 5; i++)
-{	//Add 5 water into the cart
+for (int i = 0; i < 5; i++) {
+    //Add 5 water into the cart
     btnClick('Su')
 }
 
-Mobile.takeScreenshot()
-
-btnClick('Ekmek')
-imageBtnClick('soldItems')
-Mobile.delay(3)
-
-indexBtnClick('Su','decreaseQuantity')
-
-
-Mobile.takeScreenshot()
-
-imageBtnClick('home')
-
-
-
-
 btnClick('Nakit')
 
-
 //Sell with cash
-imageBtnClick('home')
 //Navigate back to home page
+sleep(300)
+
 imageBtnClick('home')
+

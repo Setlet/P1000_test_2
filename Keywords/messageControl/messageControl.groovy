@@ -53,7 +53,7 @@ public class messageControl {
 						
 			if(cashierLogin) {
 				Mobile.tap(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierSpinner']), 1)
-				Mobile.tap(findTestObject('Object Repository/dynamic-button-object-image',[('icon-id'):'com.edata.application.ecrapp:id/text_input_end_icon']),2) //Teknik olarak doğru değil ama çalışıyor, sonra düzelt
+				Mobile.tap(findTestObject('Object Repository/dynamic-button-object-image',[('icon-id'):'com.edata.application.ecrapp:id/cashierPasswordEditText']),2) //Teknik olarak doğru değil ama çalışıyor, sonra düzelt
 				Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']),5,FailureHandling.OPTIONAL)
 				Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']), '1234', 5)
 				Mobile.tap(findTestObject('Object Repository/dynamic-button-object',[('button-name'):'Giriş']),5)
@@ -123,7 +123,7 @@ public class messageControl {
 	@Keyword
 	def static txtboxClick(String btnName) {
 		
-		Mobile.tap(findTestObject('"Object Repository/dynamic-textbox-object', [('txtbox-id') : btnName]), 5)
+		Mobile.tap(findTestObject('Object Repository/dynamic-textbox-object', [('txtbox-id') : btnName]), 5)
 	}
 	
 	@Keyword
@@ -233,7 +233,14 @@ def static clickBack() {
 }
 
 	
+
+
+
+
 }
+
+
+
 
 
 

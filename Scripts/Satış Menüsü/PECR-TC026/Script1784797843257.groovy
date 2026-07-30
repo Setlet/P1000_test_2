@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-//Mobile.startExistingApplication('com.edata.application.ecrapp')
+Mobile.startExistingApplication('com.edata.application.ecrapp')
 imageBtnClick('sales_main_page_button')
 if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
 	cashierAdminLogin()

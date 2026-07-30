@@ -17,3 +17,26 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+import static messageControl.messageControl.*
+
+Mobile.delay(8)
+//Start with home page
+Mobile.startExistingApplication('com.edata.application.ecrapp')
+//Switch to the sales page
+
+imageBtnClick('sales_main_page_button')
+//Check if cashier login is required
+
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
+	cashierAdminLogin()
+}
+btnClick('Ekmek')
+Mobile.delay(2)
+btnClick('Su')
+Mobile.delay(2)
+btnClick('Nakit')
+sleep(300)
+imageBtnClick('com.edata.application.ecrapp:id/home')
+
