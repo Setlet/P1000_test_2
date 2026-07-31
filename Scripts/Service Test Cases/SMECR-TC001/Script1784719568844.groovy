@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
 
 
-//Mobile.startExistingApplication('com.edata.application.ecrapp')
+Mobile.startExistingApplication('com.edata.application.ecrapp')
 //Go to service page
 imageBtnClick('service_main_page_button')
 

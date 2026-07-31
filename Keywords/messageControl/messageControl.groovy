@@ -128,7 +128,7 @@ public class messageControl {
 	
 	@Keyword
 	def static setTxtbox(String txtboxName, String password) {
-		Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'txtboxname']), 'password', 5)
+		Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'): txtboxName]), password, 5)
 	}
 	
 	//Detect a message thrown 
