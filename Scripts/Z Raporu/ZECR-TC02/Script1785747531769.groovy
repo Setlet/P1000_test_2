@@ -25,7 +25,7 @@ imageBtnClick('zx_main_page_button')
 if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
 	adminLogin()
 }
-
+Mobile.scrollToText(Kuyumcu Ayarları)
 btnClick('Z Günlük Satış Raporu')
 Mobile.delay(1)
 btnClick('Yazdır')
