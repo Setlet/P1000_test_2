@@ -12,6 +12,7 @@ import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as Cucumber
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testcase.TestCase
+import io.appium.java_client.AppiumDriver
 import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
@@ -232,12 +233,15 @@ def static clickBack() {
 	Mobile.tap(findTestObject('Object Repository/back-button-object'), 5)
 }
 
+
+}
+
 	
 
 
 
 
-}
+
 
 
 

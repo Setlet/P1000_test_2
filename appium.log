@@ -1,14 +1,14 @@
-[38;5;93m[78da308b][0m[38;5;160m[Logcat][0m Logcat terminated with code 0, signal null
- to Appium v3.6.0
+[38;5;112m[Appium][0m Attempting to load plugin images...
+[38;5;112m[Appium][0m Welcome to Appium v3.6.0
 [38;5;112m[Appium][0m Non-default server args:
-[38;5;112m[Appium][0m { basePath: [32m'/wd/hub'[39m, loglevel: [32m'info'[39m, port: [33m52584[39m, usePlugins: [ [32m'images'[39m ] }
+[38;5;112m[Appium][0m { basePath: [32m'/wd/hub'[39m, loglevel: [32m'info'[39m, port: [33m56878[39m, usePlugins: [ [32m'images'[39m ] }
 [38;5;112m[Appium][0m Attempting to load driver xcuitest...
 [38;5;112m[Appium][0m Attempting to load driver espresso...
 [38;5;112m[Appium][0m Attempting to load driver uiautomator2...
-[38;5;112m[Appium][0m Appium REST http interface listener started on http://0.0.0.0:52584/wd/hub
+[38;5;112m[Appium][0m Appium REST http interface listener started on http://0.0.0.0:56878/wd/hub
 [38;5;112m[Appium][0m You can provide the following URLs in your client code to connect to this server:
-	http://127.0.0.1:52584/wd/hub (only accessible from the same host)
-	http://192.168.12.163:52584/wd/hub
+	http://127.0.0.1:56878/wd/hub (only accessible from the same host)
+	http://192.168.12.126:56878/wd/hub
 [38;5;112m[Appium][0m Available drivers:
 [38;5;112m[Appium][0m   - xcuitest@12.1.1 (automationName 'XCUITest')
 [38;5;112m[Appium][0m   - espresso@9.0.5 (automationName 'Espresso')
@@ -17,105 +17,307 @@
 [38;5;112m[Appium][0m   - images@4.2.8 (ACTIVE)
 [38;5;112m[Appium][0m   - inspector@2026.7.1
 [38;5;86m[HTTP][0m --> GET /wd/hub/status 
-[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getStatus': images
-[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getStatus'
-[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getStatus'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 3 ms - 110
+[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getStatus': images
+[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getStatus'
+[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getStatus'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 4 ms - 110
 [38;5;86m[HTTP][0m --> GET /wd/hub/status 
-[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getStatus': images
-[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getStatus'
-[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getStatus'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 0 ms - 110
+[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getStatus': images
+[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getStatus'
+[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getStatus'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 1 ms - 110
 [38;5;86m[HTTP][0m --> GET /wd/hub/status 
-[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getStatus': images
-[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getStatus'
-[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getStatus'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 0 ms - 110
-[38;5;86m[HTTP][0m --> POST /wd/hub/session {"capabilities":{"firstMatch":[{"appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceId":"","appium:deviceName":"SmartPeak P1000 ECR (Android 13)","appium:mjpegServerPort":52596,"appium:newCommandTimeout":1800,"appium:platformVersion":"13","appium:systemPort":8285,"appium:udid":"0000150410PF1021026","platformName":"ANDROID"}]},"desiredCapabilities":{"appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceId":"","appium:deviceName":"SmartPeak P1000 ECR (Android 13)","appium:mjpegServerPort":52596,"appium:newCommandTimeout":1800,"appium:platformVersion":"13","appium:systemPort":8285,"appium:udid":"0000150410PF1021026","platformName":"ANDROID"}}
+[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getStatus': images
+[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getStatus'
+[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getStatus'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 1 ms - 110
+[38;5;86m[HTTP][0m --> POST /wd/hub/session {"capabilities":{"firstMatch":[{"appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceId":"","appium:deviceName":"P1000 ECR","appium:mjpegServerPort":7110,"appium:newCommandTimeout":1800,"appium:platformVersion":"13","appium:systemPort":8268,"appium:udid":"0000150410PF1021026","platformName":"ANDROID"}]},"desiredCapabilities":{"appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceId":"","appium:deviceName":"P1000 ECR","appium:mjpegServerPort":7110,"appium:newCommandTimeout":1800,"appium:platformVersion":"13","appium:systemPort":8268,"appium:udid":"0000150410PF1021026","platformName":"ANDROID"}}
 [38;5;123m[BaseDriver][0m The following arguments are not known and will be ignored: desiredCapabilities
-[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'createSession': images
-[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'createSession'
-[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'createSession'
+[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'createSession': images
+[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'createSession'
+[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'createSession'
 [38;5;112m[Appium][0m Attempting to find matching driver for automationName 'uiautomator2' and platformName 'ANDROID'
 [38;5;112m[Appium][0m The 'uiautomator2' driver was installed and matched caps.
 [38;5;112m[Appium][0m Will require it at /Users/erciyesanadoluholding/.appium/node_modules/appium-uiautomator2-driver
-[38;5;186m[AppiumDriver@5472][0m Appium v3.6.0 creating new AndroidUiautomator2Driver (v8.2.1) session
-[38;5;186m[AppiumDriver@5472][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
-[38;5;186m[AppiumDriver@5472][0m Appium's BaseDriver version is 10.7.2
-[38;5;186m[AppiumDriver@5472][0m AndroidUiautomator2Driver's BaseDriver version is 10.7.2
-[38;5;-20m[AndroidUiautomator2Driver@7a36][0m The following provided capabilities were not recognized by this driver:
-[38;5;-20m[AndroidUiautomator2Driver@7a36][0m   deviceId
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Session created with session id: 78da308b-dc56-4857-a3a1-646984dcad04
-[38;5;93m[78da308b][0m[38;5;229m[ADB][0m Found 1 'build-tools' folders under '/Users/erciyesanadoluholding/.katalon/tools/android_sdk' (newest first):
-[38;5;93m[78da308b][0m[38;5;229m[ADB][0m     /Users/erciyesanadoluholding/.katalon/tools/android_sdk/build-tools/29.0.3
-[38;5;93m[78da308b][0m[38;5;229m[ADB][0m Using 'adb' from '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/platform-tools/adb'
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Retrieving device list
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Using device: 0000150410PF1021026
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m Subscribing 7a36c75f-3e26-4cc4-b813-9693d0b4e5d5 to topic 'uiautomator2:sessionUdidClaimed'
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m Subscribing 7a36c75f-3e26-4cc4-b813-9693d0b4e5d5 to topic 'uiautomator2:sessionUdidContended'
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m Subscribing 7a36c75f-3e26-4cc4-b813-9693d0b4e5d5 to topic 'uiautomator2:sessionUdidReleased'
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m Unsubscribing 7a36c75f-3e26-4cc4-b813-9693d0b4e5d5 from topic 'uiautomator2:sessionUdidContended'
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m Unsubscribing 7a36c75f-3e26-4cc4-b813-9693d0b4e5d5 from topic 'uiautomator2:sessionUdidReleased'
-[38;5;93m[78da308b][0m[38;5;229m[ADB][0m Using 'adb' from '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/platform-tools/adb'
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
-[38;5;93m[78da308b][0m[38;5;229m[ADB][0m Getting device platform version
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Relaxing hidden api policy
-[38;5;93m[78da308b][0m[38;5;229m[ADB][0m Using 'aapt2' from '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/build-tools/29.0.3/aapt2'
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Server packages are not going to be (re)installed
-[38;5;93m[78da308b][0m[38;5;229m[ADB][0m Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Starting UIAutomator2 server 10.3.5
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Using UIAutomator2 server from '/Users/erciyesanadoluholding/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v10.3.5.apk' and test from '/Users/erciyesanadoluholding/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Waiting up to 30000ms for UiAutomator2 to be online...
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m socket hang up
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m socket hang up
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m socket hang up
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Determined the downstream protocol as 'W3C'
-[38;5;93m[78da308b][0m[38;5;-20m[AndroidUiautomator2Driver@7a36][0m Screen already unlocked, doing nothing
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m Unsubscribing 7a36c75f-3e26-4cc4-b813-9693d0b4e5d5 from topic 'uiautomator2:sessionUdidClaimed'
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m Subscribing 7a36c75f-3e26-4cc4-b813-9693d0b4e5d5 to topic 'uiautomator2:sessionUdidClaimed'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m New AndroidUiautomator2Driver session created successfully, session 78da308b-dc56-4857-a3a1-646984dcad04 added to master session list
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Promoting 1 sessionless plugins to be attached to session ID 78da308b-dc56-4857-a3a1-646984dcad04
-[38;5;86m[HTTP][0m <-- POST /wd/hub/session 200 5192 ms - 1071
+[38;5;178m[AppiumDriver@11c3][0m Appium v3.6.0 creating new AndroidUiautomator2Driver (v8.2.1) session
+[38;5;178m[AppiumDriver@11c3][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+[38;5;178m[AppiumDriver@11c3][0m Appium's BaseDriver version is 10.7.2
+[38;5;178m[AppiumDriver@11c3][0m AndroidUiautomator2Driver's BaseDriver version is 10.7.2
+[38;5;-136m[AndroidUiautomator2Driver@d450][0m The following provided capabilities were not recognized by this driver:
+[38;5;-136m[AndroidUiautomator2Driver@d450][0m   deviceId
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Session created with session id: a293d0d0-1f74-4ff7-b36d-8c19f0a95527
+[38;5;145m[a293d0d0][0m[38;5;229m[ADB][0m Found 1 'build-tools' folders under '/Users/erciyesanadoluholding/.katalon/tools/android_sdk' (newest first):
+[38;5;145m[a293d0d0][0m[38;5;229m[ADB][0m     /Users/erciyesanadoluholding/.katalon/tools/android_sdk/build-tools/29.0.3
+[38;5;145m[a293d0d0][0m[38;5;229m[ADB][0m Using 'adb' from '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/platform-tools/adb'
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Retrieving device list
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Using device: 0000150410PF1021026
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Subscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da to topic 'uiautomator2:sessionUdidClaimed'
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Subscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da to topic 'uiautomator2:sessionUdidContended'
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Subscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da to topic 'uiautomator2:sessionUdidReleased'
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Unsubscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da from topic 'uiautomator2:sessionUdidContended'
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Unsubscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da from topic 'uiautomator2:sessionUdidReleased'
+[38;5;145m[a293d0d0][0m[38;5;229m[ADB][0m Using 'adb' from '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/platform-tools/adb'
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
+[38;5;145m[a293d0d0][0m[38;5;229m[ADB][0m Getting device platform version
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Relaxing hidden api policy
+[38;5;145m[a293d0d0][0m[38;5;229m[ADB][0m Using 'aapt2' from '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/build-tools/29.0.3/aapt2'
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Server packages are not going to be (re)installed
+[38;5;145m[a293d0d0][0m[38;5;229m[ADB][0m Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Starting UIAutomator2 server 10.3.5
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Using UIAutomator2 server from '/Users/erciyesanadoluholding/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v10.3.5.apk' and test from '/Users/erciyesanadoluholding/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Waiting up to 30000ms for UiAutomator2 to be online...
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m socket hang up
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m socket hang up
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m socket hang up
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Determined the downstream protocol as 'W3C'
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Screen already unlocked, doing nothing
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Unsubscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da from topic 'uiautomator2:sessionUdidClaimed'
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Subscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da to topic 'uiautomator2:sessionUdidClaimed'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m New AndroidUiautomator2Driver session created successfully, session a293d0d0-1f74-4ff7-b36d-8c19f0a95527 added to master session list
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Promoting 1 sessionless plugins to be attached to session ID a293d0d0-1f74-4ff7-b36d-8c19f0a95527
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session 200 5259 ms - 1046
 [38;5;86m[HTTP][0m --> GET /status 
-[38;5;86m[HTTP][0m <-- GET /status 404 7 ms - 4099
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts {"implicit":60000}
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'timeouts': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'timeouts'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'timeouts'
-[38;5;86m[HTTP][0m <-- POST /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts 200 2 ms - 14
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/execute/sync {"script":"mobile: getSystemBars","args":[]}
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'execute': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'execute'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'execute'
-[38;5;86m[HTTP][0m <-- POST /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/execute/sync 200 207 ms - 148
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/execute/sync {"script":"mobile: activateApp","args":[{"appId":"com.edata.application.ecrapp","bundleId":"com.edata.application.ecrapp"}]}
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'execute': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'execute'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'execute'
-[38;5;93m[78da308b][0m[38;5;123m[BaseDriver][0m The following arguments are not known and will be ignored: bundleId
-[38;5;86m[HTTP][0m <-- POST /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/execute/sync 200 228 ms - 14
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/source 
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getPageSource': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getPageSource'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getPageSource'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/source 200 185 ms - 15250
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/screenshot 
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getScreenshot': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getScreenshot'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getScreenshot'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/screenshot 200 660 ms - 78840
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts 
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getTimeouts': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getTimeouts'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getTimeouts'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts 200 16 ms - 46
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts 
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getTimeouts': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getTimeouts'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getTimeouts'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts 200 2 ms - 46
-[38;5;93m[78da308b][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts 
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugins which can handle cmd 'getTimeouts': images
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Plugin images is now handling cmd 'getTimeouts'
-[38;5;93m[78da308b][0m[38;5;186m[AppiumDriver@5472][0m Executing default handling behavior for command 'getTimeouts'
-[38;5;86m[HTTP][0m <-- GET /wd/hub/session/78da308b-dc56-4857-a3a1-646984dcad04/timeouts 200 9 ms - 46
+[38;5;86m[HTTP][0m <-- GET /status 404 5 ms - 4099
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 2 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/execute/sync {"args":[],"script":"mobile: getSystemBars"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'execute': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'execute'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'execute'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/execute/sync 200 172 ms - 148
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/execute/sync {"args":[{"appId":"com.edata.application.ecrapp","bundleId":"com.edata.application.ecrapp"}],"script":"mobile: activateApp"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'execute': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'execute'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'execute'
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m The following arguments are not known and will be ignored: bundleId
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/execute/sync 200 217 ms - 14
+[38;5;86m[HTTP][0m --> GET /wd/hub/status 
+[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getStatus': images
+[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getStatus'
+[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getStatus'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 1 ms - 110
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getPageSource': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getPageSource'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getPageSource'
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getScreenshot': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getScreenshot'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getScreenshot'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 200 196 ms - 12037
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 200 704 ms - 72012
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 2 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"//*[@class = 'android.widget.Button' and (@text = 'Propay Manager' or . = 'Propay Manager') and @resource-id = 'com.edata.application.ecrapp:id/propay_manager']","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.Button","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 0 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getScreenshot': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getScreenshot'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getScreenshot'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 500 3 ms - 1000
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getPageSource': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getPageSource'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getPageSource'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 500 2 ms - 1441
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 2 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"//*[@class = 'android.widget.Button' and (@text = 'Propay Manager' or . = 'Propay Manager') and @resource-id = 'com.edata.application.ecrapp:id/propay_manager']","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.Button","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getScreenshot': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getScreenshot'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getScreenshot'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 500 3 ms - 1000
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getPageSource': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getPageSource'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getPageSource'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 500 1 ms - 1441
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"//*[@class = 'android.widget.Button' and (@text = 'Propay Manager' or . = 'Propay Manager') and @resource-id = 'com.edata.application.ecrapp:id/propay_manager']","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.Button","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 0 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getPageSource': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getPageSource'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getPageSource'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 500 4 ms - 1441
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getScreenshot': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getScreenshot'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getScreenshot'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 500 3 ms - 1000
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"//*[@class = 'android.widget.Button' and (@text = 'Propay Manager' or . = 'Propay Manager') and @resource-id = 'com.edata.application.ecrapp:id/propay_manager']","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 46
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":0}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements {"value":"/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.Button","using":"xpath"}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'findElements': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'findElements'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'findElements'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/elements 500 1 ms - 2277
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts {"implicit":60000}
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'timeouts': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'timeouts'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'timeouts'
+[38;5;86m[HTTP][0m <-- POST /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/timeouts 200 1 ms - 14
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getPageSource': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getPageSource'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getPageSource'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/source 500 2 ms - 1441
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'getScreenshot': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'getScreenshot'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'getScreenshot'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527/screenshot 500 1 ms - 1000
+[38;5;145m[a293d0d0][0m[38;5;86m[HTTP][0m --> DELETE /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527 
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugins which can handle cmd 'deleteSession': images
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Plugin images is now handling cmd 'deleteSession'
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Executing default handling behavior for command 'deleteSession'
+[38;5;145m[a293d0d0][0m[38;5;123m[BaseDriver][0m Unsubscribing d450cd0c-ce0c-4c31-8553-b19dd07d83da from topic 'uiautomator2:sessionUdidClaimed'
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Did not get the confirmation of UiAutomator2 server session deletion. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[38;5;145m[a293d0d0][0m[38;5;-136m[AndroidUiautomator2Driver@d450][0m Restoring hidden api policy to the device default configuration
+[38;5;145m[a293d0d0][0m[38;5;178m[AppiumDriver@11c3][0m Removing session a293d0d0-1f74-4ff7-b36d-8c19f0a95527 from our master session list
+[38;5;86m[HTTP][0m <-- DELETE /wd/hub/session/a293d0d0-1f74-4ff7-b36d-8c19f0a95527 200 876 ms - 14
+[38;5;112m[Appium][0m Received SIGTERM - shutting down
+[38;5;86m[HTTP][0m Closing Appium HTTP server
+[38;5;86m[HTTP][0m Appium HTTP server has been successfully closed after 0ms
