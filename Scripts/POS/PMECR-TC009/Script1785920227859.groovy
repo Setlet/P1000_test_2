@@ -16,42 +16,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-import java.time.LocalDate
 import static messageControl.messageControl.*
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-//Go to service page
+ 
 
-
-imageBtnClick('service_main_page_button')
-imageBtnClick('confirmLoginPassword')
-imageBtnClick('confirmLoginPassword')
-
-String Cont_Date
-//Click on 'Tüm Olaylar'
-btnClick('Tarih')
-txtboxClick('ETDate')
-
-// 1. Sistemin güncel tarihini çek
-LocalDate bugun = LocalDate.now()
-
-// 2. Gün, ay ve yılı fonksiyonuna uygun şekilde (String olarak) parçala
-String gun = bugun.getDayOfMonth().toString()
-String ay = bugun.getMonthValue().toString()
-String yil = bugun.getYear().toString()
-
-// 3. Fonksiyonuna dinamik değişkenleri gönder
-Cont_Date = setValidatedDate(gun, ay, yil)
-
-Mobile.tap( findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/date-edit-icon')  , 2)
-
-Mobile.setText(findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/tarih-txtbox'), Cont_Date, 2)
+imageBtnClick('pos_main_page_button')
+btnClick('Bankacılık Uygulamaları')
+btnClick('Propay TechPOS')
 Mobile.delay(2)
-Mobile.tap( findTestObject('Object Repository/dynamic-button-object', [('text'):'Tamam']),2)
+Mobile.scrollToText('Yönetici Menüsü')
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('button-name') : 'Parametre Yükleme']), 2)
+Mobile.delay(15)
 
-btnClick('Onayla')
 
-btnClick('Evet')
-
-clickBack()
+Mobile.pressBack()

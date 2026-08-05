@@ -9,6 +9,8 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
+import io.appium.java_client.AppiumDriver
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
@@ -16,42 +18,30 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-import java.time.LocalDate
 import static messageControl.messageControl.*
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-//Go to service page
+
+imageBtnClick('set_main_page_button')
 
 
-imageBtnClick('service_main_page_button')
-imageBtnClick('confirmLoginPassword')
-imageBtnClick('confirmLoginPassword')
 
-String Cont_Date
-//Click on 'Tüm Olaylar'
-btnClick('Tarih')
-txtboxClick('ETDate')
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
+}
+Mobile.scrollToText('Kuyumcu Ayarları')
+btnClick('Cihaz Ayarları')
+btnClick('Pil')
+btnClick('Pil Tasarrufu')
+ Mobile.delay(3)
 
-// 1. Sistemin güncel tarihini çek
-LocalDate bugun = LocalDate.now()
 
-// 2. Gün, ay ve yılı fonksiyonuna uygun şekilde (String olarak) parçala
-String gun = bugun.getDayOfMonth().toString()
-String ay = bugun.getMonthValue().toString()
-String yil = bugun.getYear().toString()
+ String adbCommand = '/Users/erciyesanadoluholding/Library/Android/sdk/platform-tools/adb adb shell settings get global low_power' 
+ Process process = adbCommand.execute()
+ process.waitFor()
+if (adbCommand.execute() == "1") {
 
-// 3. Fonksiyonuna dinamik değişkenleri gönder
-Cont_Date = setValidatedDate(gun, ay, yil)
-
-Mobile.tap( findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/date-edit-icon')  , 2)
-
-Mobile.setText(findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/tarih-txtbox'), Cont_Date, 2)
-Mobile.delay(2)
-Mobile.tap( findTestObject('Object Repository/dynamic-button-object', [('text'):'Tamam']),2)
-
-btnClick('Onayla')
-
-btnClick('Evet')
-
-clickBack()
+	KeywordUtil.markPassed("Tassaruf modunda")
+} 
+	

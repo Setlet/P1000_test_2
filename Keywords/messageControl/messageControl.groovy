@@ -200,15 +200,11 @@ def static setValidatedDate(String day, String month, String year) {
 	
 	String formattedDay = String.format("%02d", d)
 	String formattedMonth = String.format("%02d", m)
-	String finalDate = formattedDay + "." + formattedMonth + "." + year
-	
-	Mobile.tap( findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/date-edit-icon')  , 2)
-	
-	Mobile.setText(findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/tarih-txtbox'), finalDate, 2)
-	Mobile.delay(2)
-	Mobile.tap(  findTestObject('Object Repository/dynamic-button-object',[('text'):'Tamam'])  , 2)
-	
+	// aralarındaki noktaları sildim
+	String finalDate = formattedDay  + formattedMonth  + year
+
 	println("System Log: Date successfully validated and set to " + finalDate)
+	return finalDate;
 }
 
 @Keyword

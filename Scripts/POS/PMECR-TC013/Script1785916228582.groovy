@@ -20,14 +20,13 @@ import static messageControl.messageControl.*
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
+ 
 
 imageBtnClick('pos_main_page_button')
 btnClick('Bankacılık Uygulamaları')
 btnClick('Propay TechPOS')
-
+Mobile.delay(2)
 Mobile.scrollToText('Yönetici Menüsü')
-btnClick('Yönetici Menüsü')
-btnClick('Kurulum')
-Mobile.delay(5)
-btnClick('PASİF')
-
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('button-name') : 'Son Günsonu Slibini Yazdır' ]), 2)
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('button-name') : 'Detay Rapor' ]), 2)
+Mobile.pressBack()

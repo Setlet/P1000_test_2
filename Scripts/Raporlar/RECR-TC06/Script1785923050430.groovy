@@ -4,6 +4,8 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import java.util.Date
+import java.time.LocalDate
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
@@ -16,42 +18,52 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-import java.time.LocalDate
 import static messageControl.messageControl.*
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-//Go to service page
+imageBtnClick('zx_main_page_button')
 
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
+}
+LocalDate bugun_e3  = LocalDate.now()
 
-imageBtnClick('service_main_page_button')
-imageBtnClick('confirmLoginPassword')
-imageBtnClick('confirmLoginPassword')
+String gun_e3  = bugun_e3.getDayOfMonth().toString()
+String ay_e3 = bugun_e3.getMonthValue().toString()
+String yil_e3 = bugun_e3.getYear().toString()
+//not good...
+(int) gun_e3 == gun_e3.toInteger()
+(String) gun_e3 == gun_e3.toString()
 
-String Cont_Date
-//Click on 'Tüm Olaylar'
-btnClick('Tarih')
-txtboxClick('ETDate')
+LocalDate bugun  = LocalDate.now()
 
-// 1. Sistemin güncel tarihini çek
-LocalDate bugun = LocalDate.now()
-
-// 2. Gün, ay ve yılı fonksiyonuna uygun şekilde (String olarak) parçala
-String gun = bugun.getDayOfMonth().toString()
+String gun  = bugun.getDayOfMonth().toString()
 String ay = bugun.getMonthValue().toString()
 String yil = bugun.getYear().toString()
 
-// 3. Fonksiyonuna dinamik değişkenleri gönder
-Cont_Date = setValidatedDate(gun, ay, yil)
 
-Mobile.tap( findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/date-edit-icon')  , 2)
+btnClick('Mali Raporlar')
+Mobile.delay(1)
+btnClick('Mali Hafıza Rapor')
+imageBtnClick('ETStartZNo')
+imageBtnClick('one')
+imageBtnClick('ETEndZNo')
+imageBtnClick('three')
+imageBtnClick('btnOk')
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-button-object',[('text'):'Onayla']), 5, FailureHandling.OPTIONAL)) {
+	
+}
+btnClick('Tarih')
+imageBtnClick('ETStartDate')
+imageBtnClick('mtrl_picker_header_toggle')
+Mobile.sendKeys(setValidatedDate(gun_e3, ay_e3, yil_e3))
+btnClick('Tamam')
+imageBtnClick('ETEndDate')
+imageBtnClick('mtrl_picker_header_toggle')
+Mobile.sendKeys(setValidatedDate(gun, ay, yil))
+btnClick('Tamam')
 
-Mobile.setText(findTestObject('Object Repository/Service/Belirli Tarihler Arasi Olay Kaydi/tarih-txtbox'), Cont_Date, 2)
-Mobile.delay(2)
-Mobile.tap( findTestObject('Object Repository/dynamic-button-object', [('text'):'Tamam']),2)
-
-btnClick('Onayla')
-
-btnClick('Evet')
-
+Mobile.delay(5)
 clickBack()
+imageBtnClick('navigation_home')
