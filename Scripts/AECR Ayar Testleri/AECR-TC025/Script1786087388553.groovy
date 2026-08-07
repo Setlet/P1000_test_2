@@ -17,21 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-imageBtnClick('sales_main_page_button')
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
-	cashierAdminLogin()
+
+
+imageBtnClick('set_main_page_button')
+
+
+
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
 }
 
-btnClick('Yemek')
-btnClick('Su')
-btnClick('Ödeme')
-btnClick('Hediye Kartı')
-String msg = detectMessage()
-if(msg != "")
-	saleEscape(true)
-else{
-	Mobile.delay(3)
-	imageBtnClick('home')
-}
+Mobile.scrollToText('Kuyumcu Ayarları')
+btnClick('Ödeme Ayarları')
+btnClick('SENET / ÇEK')
+Mobile.delay(2)
+imageBtnClick('activePayment')
+Mobile.delay(2)
+clickBack()
+clickBack()

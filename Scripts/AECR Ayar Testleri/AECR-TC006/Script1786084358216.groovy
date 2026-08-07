@@ -17,21 +17,34 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
+
+
+imageBtnClick('set_main_page_button')
+
+
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
+}
+btnClick('Kısım Ayarları')
+imageBtnClick('ETDepartmentPrice')
+Mobile.sendKeys('\b1200')
+Mobile.delay(2)
+clickBack()
+btnClick('Kaydet')
+Mobile.delay(2)
+
+clickBack()
+clickBack()
+
+
 imageBtnClick('sales_main_page_button')
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object', [('text') : 'Kasiyer Girişi']), 5,FailureHandling.OPTIONAL)) {
 	cashierAdminLogin()
 }
-
-btnClick('Yemek')
 btnClick('Su')
-btnClick('Ödeme')
-btnClick('Hediye Kartı')
-String msg = detectMessage()
-if(msg != "")
-	saleEscape(true)
-else{
-	Mobile.delay(3)
-	imageBtnClick('home')
-}
+int Su_para =  12
+if(Su_para  != findTestObject('Object Repository/dynamic-textbox-object', [('icon-id') : 'itemCalculatedTotalPrice']) )
+	KeywordUtil.markPassed()

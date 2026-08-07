@@ -41,14 +41,19 @@ btnClick('Ekran Parlaklığı')
  String adbCommand = '/Users/erciyesanadoluholding/Library/Android/sdk/platform-tools/adb adb shell settings get system screen_brightness' 
  Process process = adbCommand.execute()
  process.waitFor()
-String Screen_Bright_f = adbCommand.execute()
+
 
 String adbCommand_2 = '/Users/erciyesanadoluholding/Library/Android/sdk/platform-tools/adb adb shell settings put system screen_brightness 255'
 Process process_2 = adbCommand_2.execute()
 process_2.waitFor()
-String Screen_Bright_f_2 = adbCommand_2.execute()
 
-if(Screen_Bright_f_2  > Screen_Bright_f) {
-	
-	
+
+if(process_2  > process_f) {
+	Mobile.delay(300)
+String adbCommand_3 =   '/Users/erciyesanadoluholding/Library/Android/sdk/platform-tools/adb adb shell dumpsys window displays'
+Process process_3 = adbCommand_3.execute()
+process_3.waitFor()
+if(mScreenState == OFF) {
+	KeywordUtil.markPassed()
+}
 }

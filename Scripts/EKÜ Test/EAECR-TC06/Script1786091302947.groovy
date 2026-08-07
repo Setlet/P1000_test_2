@@ -14,24 +14,41 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.openai.models.realtime.AudioTranscription.Delay as Delay
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static messageControl.messageControl.*
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import internal.GlobalVariable as GlobalVariable
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-imageBtnClick('sales_main_page_button')
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
-	cashierAdminLogin()
+
+
+imageBtnClick('eku_main_page_button')
+
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object', [('text') : 'Yönetici Girişi']),     1, FailureHandling.OPTIONAL)) {
+	adminLogin()
 }
 
-btnClick('Yemek')
-btnClick('Su')
-btnClick('Ödeme')
-btnClick('Hediye Kartı')
-String msg = detectMessage()
-if(msg != "")
-	saleEscape(true)
-else{
-	Mobile.delay(3)
-	imageBtnClick('home')
-}
+btnClick('Fiş Kopyası')
+btnClick('Belirli Fiş Kopyası')
+btnClick('Tarih/Saat')
+	imageBtnClick('ETDate')
+	
+	LocalDate bugun = LocalDate.now()
+	
+
+	String gun = bugun.getDayOfMonth().toString()
+	String ay = bugun.getMonthValue().toString()
+	String yil = bugun.getYear().toString()
+	
+	Cont_Date = setValidatedDate(gun, ay, yil)
+	
+	imageBtnClick('mtrl_picker_header_toggle')
+	
+	Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object', [('text') : 'Yönetici Girişi']), Cont_Date, 2)
+btnClick('Tamam')
+imageBtnClick('ETHour')
+Mobile.sendKeys('1')
+btnClick('Onayla')
