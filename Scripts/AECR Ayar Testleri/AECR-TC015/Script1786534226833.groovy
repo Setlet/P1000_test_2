@@ -20,27 +20,23 @@ import static messageControl.messageControl.*
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-imageBtnClick('sales_main_page_button')
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
-	cashierAdminLogin()
+
+
+imageBtnClick('set_main_page_button')
+
+String ETPluNo_Y = 1
+String ETPluNo_Y = 9999
+
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
 }
-String Vergi_no = 55555555555
-String TC_no = 11111111111
-String Tahsilat = 10000
-imageBtnClick('documents')
-labelDetect('Avans')
-btnClick('Vergi Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Vergi_no , 5)
-btnClick('TC Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), TC_no, 5)
 
-btnClick('Ön Tahsilat Tutarı')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Tahsilat, 5)
-imageBtnClick('buttonConfirmDoc')
-Mobile.delay(5)
-imageBtnClick('home')
+btnClick('Yönetici Şifresi Ayarları')
 
+btnClick('Yeni şifre giriniz.')
+Mobile.sendKeys('4321')
+btnClick('Tekrar şifre giriniz.')
+Mobile.sendKeys('4321')
+btnClick('Kaydet')
 
-
-
-
+imageBtnClick('navigation_home')

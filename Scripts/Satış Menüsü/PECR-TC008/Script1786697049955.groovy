@@ -16,31 +16,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import static messageControl.messageControl.*
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-imageBtnClick('sales_main_page_button')
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
-	cashierAdminLogin()
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object', [('text') : 'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
+    cashierAdminLogin()
 }
-String Vergi_no = 55555555555
-String TC_no = 11111111111
-String Tahsilat = 10000
-imageBtnClick('documents')
-labelDetect('Avans')
-btnClick('Vergi Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Vergi_no , 5)
-btnClick('TC Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), TC_no, 5)
+imageBtnClick('rightSwipe')
+btnClick('kahve')
+btnClick('Su')
+btnClick('Kredi')
 
-btnClick('Ön Tahsilat Tutarı')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Tahsilat, 5)
-imageBtnClick('buttonConfirmDoc')
-Mobile.delay(5)
-imageBtnClick('home')
-
-
-
-
-
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object-image',[('icon-id') : 'layout_manuel_payment']))
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object-image',[('icon-id') : 'cc_card']))
+Mobile.sendKeys('5421190141566231')
+Mobile.delay(3)
+Mobile.sendKeys('12')
+Mobile.delay(1)
+Mobile.sendKeys('29')
+Mobile.delay(1)
+Mobile.sendKeys('340')

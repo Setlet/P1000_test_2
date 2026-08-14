@@ -27,4 +27,15 @@ if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-ob
 
 imageBtnClick('saleConfigurations')
 
-i
+imageBtnClick('cashiers')
+
+
+Mobile.tap(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierSpinner']), 1)
+Mobile.tap(findTestObject('Object Repository/dynamic-button-object-image',[('icon-id'):'com.edata.application.ecrapp:id/cashierPasswordEditText']),2) //Teknik olarak doğru değil ama çalışıyor, sonra düzelt
+Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']),5,FailureHandling.OPTIONAL)
+Mobile.setText(findTestObject('Object Repository/dynamic-textbox-object',[('txtbox-id'):'cashierPasswordEditText']), '1234', 5)
+Mobile.tap(findTestObject('Object Repository/dynamic-button-object',[('button-name'):'Giriş']),5)
+
+btnClick('ekmek')
+
+btnClick('Nakit')

@@ -24,8 +24,11 @@ imageBtnClick('sales_main_page_button')
 if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
 	cashierAdminLogin()
 }
+imageBtnClick('text_input_end_icon')
+btnClick('USD')
+Mobile.delay(3)
 String Vergi_no = 55555555555
-String TC_no = 11111111111
+String TC_no = 55555555555
 String Tahsilat = 10000
 imageBtnClick('documents')
 labelDetect('Avans')
@@ -36,6 +39,7 @@ Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Pay
 
 btnClick('Ön Tahsilat Tutarı')
 Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Tahsilat, 5)
+
 imageBtnClick('buttonConfirmDoc')
 Mobile.delay(5)
 imageBtnClick('home')

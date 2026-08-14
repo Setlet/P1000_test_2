@@ -226,7 +226,7 @@ Mobile.setText(findTestObject('Object Repository/Service/Saat/DD'), minute, 2)
 }
 @Keyword
 def static clickBack() {
-	Mobile.tap(findTestObject('Object Repository/back-button-object'), 5)
+	Mobile.tap(findTestObject('Object Repository/dynamic-button-object'), 5)
 }
 
 

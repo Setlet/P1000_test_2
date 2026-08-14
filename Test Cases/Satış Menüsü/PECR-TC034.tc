@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>RECR-TC13</name>
+   <name>PECR-TC034</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>6a5d6077-8ead-41f0-8995-a75f47d5b939</testCaseGuid>
+   <testCaseGuid>6e6e2a57-4f4b-4155-9f75-ca03eae65cb8</testCaseGuid>
 </TestCaseEntity>

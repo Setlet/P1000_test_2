@@ -24,22 +24,56 @@ imageBtnClick('sales_main_page_button')
 if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
 	cashierAdminLogin()
 }
-String Vergi_no = 55555555555
-String TC_no = 11111111111
-String Tahsilat = 10000
 imageBtnClick('documents')
-labelDetect('Avans')
-btnClick('Vergi Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Vergi_no , 5)
-btnClick('TC Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), TC_no, 5)
+btnClick('Fatura Satış')
+btnClick('Fatura Tahsilatı')
+btnClick('Fatura Seri No')
+Mobile.sendKeys('SSD')
+btnClick('Fatura Sıra No')
+Mobile.sendKeys('123456')
+btnClick('Kurum ismi')
+Mobile.sendKeys('PROPAY')
 
-btnClick('Ön Tahsilat Tutarı')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Tahsilat, 5)
-imageBtnClick('buttonConfirmDoc')
+btnClick('Fatura Tarihi')
+Mobile.delay(2)
+btnClick('iptal')
+
+btnClick('Abone No')
+Mobile.sendKeys('33')
+
+btnClick('Fatura Tarihi')
+Mobile.delay(2)
+btnClick('iptal')
+
+btnClick('Fatura Tutarı')
+Mobile.sendKeys('987654')
+
+
+btnClick('Fatura Tarihi')
+Mobile.delay(2)
+btnClick('iptal')
+
+btnClick('Komisyon Tutarı')
+Mobile.sendKeys('\b\b\b\b\b\b50000')
+
+btnClick('Fatura Tarihi')
+Mobile.delay(2)
+btnClick('iptal')
+
+btnClick('Onayla')
+
 Mobile.delay(5)
+
+btnClick('Senet / Çek')
+Mobile.delay(6)
+
 imageBtnClick('home')
 
+imageBtnClick('zx_main_page_button')
+
+adminLogin()
+
+btnClick('Z Günlük Satış Raporu')
 
 
 

@@ -39,10 +39,7 @@ Mobile.delay(1)
 btnClick('Propay Manager')
 Mobile.delay(1)
 Mobile.delay(1)
-Mobile.scrollToText('Olay Kayıtları')
-imageBtnClick('sold_item_cart_menu_home')
-labelDetect('01 : servis ayarları')
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('text') : 'Anahtar Yükleme]'), 0)
+Mobile.verifyElementExists('com.edata.gatemain:id/tv_is_loaded')
 
-btnClick('Tamam')
-btnClick('Tamam')
 

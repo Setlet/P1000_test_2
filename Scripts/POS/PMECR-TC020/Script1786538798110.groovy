@@ -20,27 +20,23 @@ import static messageControl.messageControl.*
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-imageBtnClick('sales_main_page_button')
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
-	cashierAdminLogin()
-}
-String Vergi_no = 55555555555
-String TC_no = 11111111111
-String Tahsilat = 10000
-imageBtnClick('documents')
-labelDetect('Avans')
-btnClick('Vergi Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Vergi_no , 5)
-btnClick('TC Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), TC_no, 5)
+ 
+String Eski_Şifre = 0
 
-btnClick('Ön Tahsilat Tutarı')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Tahsilat, 5)
-imageBtnClick('buttonConfirmDoc')
-Mobile.delay(5)
-imageBtnClick('home')
+imageBtnClick('pos_main_page_button')
+btnClick('Bankacılık Uygulamaları')
+btnClick('Propay TechPOS')
+Mobile.delay(2)
+Mobile.scrollToText('Yönetici Menüsü')
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('button-name') : 'Yönetici Menüsü' ]), 2)
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('button-name') : 'IP-PORT Ayarları']) , 2)
 
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object-image',[('icon-id') : 'iv_edit_1']) , 2)
 
+Mobile.sendKeys('\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b 111.111.111.111')
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object-image',[('icon-id') : 'et_input2']) , 2)
 
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('button-name') : 'Tamam']) , 2)
 
-
+	Mobile.delay(3)
+Mobile.tap(findTestObject('Object Repository/POSTech/dynamic-button-object',[('button-name') : 'Tamam']) , 2)

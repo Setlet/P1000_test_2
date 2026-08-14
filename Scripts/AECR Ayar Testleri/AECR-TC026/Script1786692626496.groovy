@@ -9,6 +9,8 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
+import io.appium.java_client.AppiumDriver
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
@@ -20,27 +22,29 @@ import static messageControl.messageControl.*
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 Mobile.startExistingApplication('com.edata.application.ecrapp')
-imageBtnClick('sales_main_page_button')
-if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Kasiyer Girişi']), 5, FailureHandling.OPTIONAL)) {
-	cashierAdminLogin()
+
+imageBtnClick('set_main_page_button')
+
+
+
+if (Mobile.verifyElementExist(findTestObject('Object Repository/dynamic-label-object',[('text'):'Yönetici Girişi']), 5, FailureHandling.OPTIONAL)) {
+	adminLogin()
 }
-String Vergi_no = 55555555555
-String TC_no = 11111111111
-String Tahsilat = 10000
-imageBtnClick('documents')
-labelDetect('Avans')
-btnClick('Vergi Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Vergi_no , 5)
-btnClick('TC Kimlik No')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), TC_no, 5)
-
-btnClick('Ön Tahsilat Tutarı')
-Mobile.setText(findTestObject('Object Repository/Sale/Document Types/Advance Payment/advance_payment_textbox_tax_id_number'), Tahsilat, 5)
-imageBtnClick('buttonConfirmDoc')
+Mobile.scrollToText('Kuyumcu Ayarları')
+btnClick('Cihaz Ayarları')
+btnClick('Ağ ve İnternet')
+btnClick('Wifi')
+ Mobile.delay(1)
+btnClick('WiFi Tara')
+btnClick('R2EDATA')
+btnClick('Bağlan')
 Mobile.delay(5)
-imageBtnClick('home')
 
+ String adbCommand = '/Users/erciyesanadoluholding/Library/Android/sdk/platform-tools/adb adb shell dumpsys wifi' 
+ Process process = adbCommand.execute()
+ process.waitFor()
+if (adbCommand.execute() == "1") {
 
-
-
-
+	KeywordUtil.markPassed("Bağlı değil")
+} 
+	
