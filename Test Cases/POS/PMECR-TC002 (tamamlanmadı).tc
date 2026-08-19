@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>AECR-TC025</name>
+   <name>PMECR-TC002 (tamamlanmadı)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>57327006-cbf1-4738-a0a0-bb9d495c3916</testCaseGuid>
+   <testCaseGuid>7eae7b6e-cc7b-4400-aa0d-1a0ac66ce593</testCaseGuid>
 </TestCaseEntity>

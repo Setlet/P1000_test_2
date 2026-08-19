@@ -1,23 +1,23 @@
 [38;5;78m[a24f88fe][0m[38;5;160m[Logcat][0m Logcat terminated with code 0, signal null
- to Appium v3.6.0
-[38;5;112m[Appium][0m Non-default server args:
-[38;5;112m[Appium][0m { basePath: [32m'/wd/hub'[39m, loglevel: [32m'info'[39m, port: [33m62224[39m, usePlugins: [ [32m'images'[39m ] }
-[38;5;112m[Appium][0m Attempting to load driver xcuitest...
-[38;5;112m[Appium][0m Attempting to load driver espresso...
-[38;5;112m[Appium][0m Attempting to load driver uiautomator2...
-[38;5;112m[Appium][0m Appium REST http interface listener started on http://0.0.0.0:62224/wd/hub
-[38;5;112m[Appium][0m You can provide the following URLs in your client code to connect to this server:
-	http://127.0.0.1:62224/wd/hub (only accessible from the same host)
-	http://192.168.12.123:62224/wd/hub
-[38;5;112m[Appium][0m Available drivers:
-[38;5;112m[Appium][0m   - xcuitest@12.1.1 (automationName 'XCUITest')
-[38;5;112m[Appium][0m   - espresso@9.0.5 (automationName 'Espresso')
-[38;5;112m[Appium][0m   - uiautomator2@8.2.1 (automationName 'UiAutomator2')
-[38;5;112m[Appium][0m Available plugins:
-[38;5;112m[Appium][0m   - images@4.2.8 (ACTIVE)
-[38;5;112m[Appium][0m   - inspector@2026.7.1
-[38;5;86m[HTTP][0m --> GET /wd/hub/status 
-[38;5;204m[AppiumDriver@2448][0m Plugins which can handle cmd 'getStatus': images
+file:///Users/erciyesanadoluholding/.appium/node_modules/appium-uiautomator2-driver/node_modules/teen_process/build/esm/lib/exec.js:109
+                const err = Object.assign(new Error(`Command '${rep}' exited with code ${code}`), {
+                                          ^
+
+Error: Error executing adbExec. Original error: 'Command '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/platform-tools/adb -P 5037 -s 0000150410PF1021026 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: error: device '0000150410PF1021026' not found
+
+    at ChildProcess.<anonymous> (file:///Users/erciyesanadoluholding/.appium/node_modules/appium-uiautomator2-driver/node_modules/teen_process/build/esm/lib/exec.js:109:43)
+    at ChildProcess.emit (node:events:509:20)
+    at maybeClose (node:internal/child_process:1125:16)
+    at Socket.<anonymous> (node:internal/child_process:497:11)
+    at Socket.emit (node:events:509:20)
+    at Pipe.<anonymous> (node:net:355:12) {
+  stdout: '',
+  stderr: "error: device '0000150410PF1021026' not found\n",
+  code: 1
+}
+
+Node.js v26.5.0
+hich can handle cmd 'getStatus': images
 [38;5;204m[AppiumDriver@2448][0m Plugin images is now handling cmd 'getStatus'
 [38;5;204m[AppiumDriver@2448][0m Executing default handling behavior for command 'getStatus'
 [38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 6 ms - 110
@@ -114,3 +114,39 @@
 [38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Plugin images is now handling cmd 'getTimeouts'
 [38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Executing default handling behavior for command 'getTimeouts'
 [38;5;86m[HTTP][0m <-- GET /wd/hub/session/a24f88fe-7dec-47b0-9ede-d5a84ef32382/timeouts 200 5 ms - 46
+[38;5;78m[a24f88fe][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a24f88fe-7dec-47b0-9ede-d5a84ef32382/timeouts 
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a24f88fe-7dec-47b0-9ede-d5a84ef32382/timeouts 200 16 ms - 46
+[38;5;78m[a24f88fe][0m[38;5;86m[HTTP][0m --> GET /wd/hub/session/a24f88fe-7dec-47b0-9ede-d5a84ef32382/timeouts 
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Plugins which can handle cmd 'getTimeouts': images
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Plugin images is now handling cmd 'getTimeouts'
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Executing default handling behavior for command 'getTimeouts'
+[38;5;86m[HTTP][0m <-- GET /wd/hub/session/a24f88fe-7dec-47b0-9ede-d5a84ef32382/timeouts 200 19 ms - 46
+[38;5;78m[a24f88fe][0m[38;5;-180m[AndroidUiautomator2Driver@79ad][0m Shutting down because we waited 1800 seconds for a command
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Ending session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+[38;5;78m[a24f88fe][0m[38;5;204m[AppiumDriver@2448][0m Removing session 'a24f88fe-7dec-47b0-9ede-d5a84ef32382' from our master session list
+[38;5;78m[a24f88fe][0m[38;5;123m[BaseDriver][0m Unsubscribing 79ad4d1a-2591-4bd2-b7a8-335d3c13d37d from topic 'uiautomator2:sessionUdidClaimed'
+[38;5;78m[a24f88fe][0m[38;5;-180m[AndroidUiautomator2Driver@79ad][0m Did not get the confirmation of UiAutomator2 server session deletion. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,ps,--help
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,ps,--help
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,ps
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,ps
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,am,force-stop,io.appium.uiautomator2.server.test
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,am,force-stop,io.appium.uiautomator2.server
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,am,force-stop,io.appium.uiautomator2.server.test
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,am,force-stop,io.appium.uiautomator2.server
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,dumpsys,activity,services,io.appium.settings/.recorder.RecorderService
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,dumpsys,activity,services,io.appium.settings/.recorder.RecorderService
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: forward,--remove,tcp:8249
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: forward,--remove,tcp:8249
+[38;5;78m[a24f88fe][0m[38;5;-180m[AndroidUiautomator2Driver@79ad][0m Unable to remove system port forward: Error executing adbExec. Original error: 'Command '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/platform-tools/adb -P 5037 -s 0000150410PF1021026 forward --remove tcp\:8249' exited with code 1'; Command output: adb: error: device '0000150410PF1021026' not found
+
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: forward,--remove,tcp:62236
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: forward,--remove,tcp:62236
+[38;5;78m[a24f88fe][0m[38;5;-180m[AndroidUiautomator2Driver@79ad][0m Unable to remove MJPEG server port forward: Error executing adbExec. Original error: 'Command '/Users/erciyesanadoluholding/.katalon/tools/android_sdk/platform-tools/adb -P 5037 -s 0000150410PF1021026 forward --remove tcp\:62236' exited with code 1'; Command output: adb: error: device '0000150410PF1021026' not found
+
+[38;5;78m[a24f88fe][0m[38;5;-180m[AndroidUiautomator2Driver@79ad][0m Restoring hidden api policy to the device default configuration
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy
+[38;5;78m[a24f88fe][0m[38;5;229m[ADB][0m Error sending command, reconnecting device and retrying: shell,settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy

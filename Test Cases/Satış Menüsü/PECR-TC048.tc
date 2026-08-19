@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>AECR-TC025</name>
+   <name>PECR-TC048</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>57327006-cbf1-4738-a0a0-bb9d495c3916</testCaseGuid>
+   <testCaseGuid>aa1b1268-ad74-44b8-8a35-adfe3915afa6</testCaseGuid>
 </TestCaseEntity>

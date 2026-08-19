@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>AECR-TC025</name>
+   <name>ZECR-TC03</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>57327006-cbf1-4738-a0a0-bb9d495c3916</testCaseGuid>
+   <testCaseGuid>13b8c254-aaa2-47be-94cf-c04148096297</testCaseGuid>
 </TestCaseEntity>
